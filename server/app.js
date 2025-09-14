@@ -9,7 +9,10 @@ const PORT=process.env.PORT
 app.use(express.urlencoded());;
 app.use(express.json());
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: "https://your-frontend.vercel.app" // or "*" for testing
+}));
 
 app.get('/',(req,res)=>{
     try{
