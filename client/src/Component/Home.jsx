@@ -33,10 +33,11 @@ function Home() {
    try{
       //  setShowspinner(true)
       //   const response=await axios.post("http://localhost:7070/sendmail/sendmail",input)
-      const response = await axios.post(
-  "https://yashportfolio-production.up.railway.app/sendmail/sendmail",
+     const response = await axios.post(
+  `${import.meta.env.VITE_BACKEND_URL}/sendmail/sendmail`,
   input
 );
+
 
 
         const {message}=response.data;
