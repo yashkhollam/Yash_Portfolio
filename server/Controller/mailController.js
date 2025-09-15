@@ -17,8 +17,12 @@ const {name,email,subject,message}=req.body;
             from:process.env.Yashmail,
             replyTo:email,
             to:email,
-            subject:subject,
-            text:`${name} (${email})\n\n${message}`,
+            subject:`Portfolio Contact from - ${name}`,
+            text:`You have a new contact request from your portfolio: 
+            
+             Name:${name}
+             Email:${email}
+              Message:${message}`,
         };
 
         await transpoter.sendMail(mailoption);
