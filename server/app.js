@@ -6,13 +6,15 @@ const cors=require('cors')
 dotenv.config();
 const app=express();
 const PORT=process.env.PORT
-app.use(express.urlencoded());;
+app.use(express.urlencoded({extended:true}));;
 app.use(express.json());
 
-// app.use(cors());
+
 app.use(cors({
-    origin: "https://your-frontend.vercel.app" // or "*" for testing
-}));
+    origin:"*",
+    methods:["GET","POST"]
+}))
+ 
 
 app.get('/',(req,res)=>{
     try{
