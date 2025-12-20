@@ -192,8 +192,8 @@ function Home() {
                 
            
                 <div className=''>
-               <p id='dwnldbtn' ><a href='/yashResume.pdf'
-                                 download={"YashKhollamMERNResume.pdf"} 
+               <p id='dwnldbtn' ><a href='/yashmernresume.pdf'
+                                 download={"yashmernresume.pdf"} 
                                  // target='_blank'
                                  rel="noopener noreferrer"
                                  style={{color:"black",textDecoration:"none"}}><FontAwesomeIcon icon='download'/> Downlaod CV</a></p>  
