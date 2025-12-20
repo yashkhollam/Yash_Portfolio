@@ -13,11 +13,10 @@ const {name,email,subject,message}=req.body;
             }
         })
 
-         await transpoter.verify();
-         console.log("✅ SMTP server ready");
+         
 
         const mailoption={
-            from:process.env.Yashmail,
+            from:email,
             replyTo:email,
             to:process.env.Yashmail,
             subject:`Portfolio Contact from - ${name}`,
