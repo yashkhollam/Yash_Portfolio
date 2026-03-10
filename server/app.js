@@ -10,10 +10,7 @@ app.use(express.urlencoded({extended:true}));;
 app.use(express.json());
 
 
-app.use(cors({
-    origin:["http://localhost:5173","https://yashkhollamportfolio.vercel.app"],
-    methods:["GET","POST"]
-}))
+app.use(cors())
  
 
 app.get('/',(req,res)=>{
@@ -30,7 +27,7 @@ app.get('/',(req,res)=>{
 })
 
 
-app.use('/sendmail',route)
+app.use('/mail',route)
 
 app.listen(PORT,()=>{
     console.log(`Server started at PORT: ${PORT}`)

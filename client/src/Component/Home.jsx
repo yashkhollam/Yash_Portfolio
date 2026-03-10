@@ -35,7 +35,7 @@ function Home() {
       //   const response=await axios.post("http://localhost:7070/sendmail/sendmail",input)
     
       const response = await axios.post(
-  `${import.meta.env.VITE_BACKEND_URL}/sendmail/sendmail`,
+  `${import.meta.env.VITE_BACKEND_URL}/mail/sendmail`,
   input
 );
 
@@ -51,7 +51,7 @@ function Home() {
 
    }
    catch(err){
-       console.log(err)
+       console.log(err.message)
       toast.error("Failed to send Email")
       // setShowspinner(false)
    }
@@ -95,7 +95,7 @@ function Home() {
          <div className="col-12 col-md-6 " id='hero-col'>
               <h1 id='hero-heading'>Hi,I'm <span className='hero-cont-username'>Yash</span></h1>
           <h3 id='hero-cont-heading'>MERN Stack Developer</h3> 
-          <p>A passionate MERN stack developer eager to build my first professional web applications. Skilled in MongoDB, Express, React, and Node.js with a strong foundation in JavaScript.</p>
+          <p>MERN Stack Developer passionate about building full-stack web applications using MongoDB, Express.js, React, and Node.js while continuously improving my JavaScript skills.</p>
           
          
          <button id='hiremebtn'>
@@ -192,8 +192,8 @@ function Home() {
                 
            
                 <div className=''>
-               <p id='dwnldbtn' ><a href='/yashmernresume.pdf'
-                                 download={"yashmernresume.pdf"} 
+               <p id='dwnldbtn' ><a href='/Yash Khollam MERN Resume.pdf'
+                                 download={"Yash Khollam MERN Resume.pdf"} 
                                  // target='_blank'
                                  rel="noopener noreferrer"
                                  style={{color:"black",textDecoration:"none"}}><FontAwesomeIcon icon='download'/> Downlaod CV</a></p>  
@@ -327,9 +327,9 @@ function Home() {
             ))
            }
 
-          <div style={{display:"flex",justifyContent:"center"}}>
+          {/* <div style={{display:"flex",justifyContent:"center"}}>
              <p  id='viewprojects' ><FontAwesomeIcon icon={'eye'}/>View All Projects</p>
-          </div>
+          </div> */}
           
         </div>
       

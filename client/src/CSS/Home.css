@@ -571,7 +571,7 @@ content: '';
  
     min-width:370px;
     width:auto;
-    min-height:300px;
+    min-height:430px;
     height:auto;
     border-radius:13px;
         box-shadow:0 5px 7px rgba(0, 0, 0, 0.277); 
@@ -590,8 +590,8 @@ content: '';
 #project-img{
     width:100%;
     margin:0 auto;
-    height:200px;
-    object-fit:cover;
+    height:100%;
+    object-fit:contain;
     /* background-color:yellow; */
     display:flex;
     justify-content: center;
@@ -614,7 +614,7 @@ content: '';
 #project-description{
     /* background-color:yellow; */
     margin:0;
-    font-size:1.09rem;
+    font-size:1rem;
      /* font-family:Montserrat; */
        font-family: 'Poppins', sans-serif;
      font-weight:400;

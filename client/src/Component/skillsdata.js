@@ -59,27 +59,30 @@ export const Backendicon=[
 ];
 
 export const projectdata=[
-     {
-        image:"/TaskkManagement.png",
-        title:"Task Management App",
-        description:"Productivity application for organizing tasks with drag-and-drop functionality.",
-        livedemo:"https://task-web-black-delta.vercel.app",
-        gitcode:"https://github.com/yashkhollam/Task_Web"
-      
-    },
+    
     {
-        image:"https://www.onlineittuts.com/wp-content/uploads/2024/01/eCommerce-website-using-HTML-CSS-and-JavaScript.png",
-        title:"E-commerce Platform",
-        description:"Full-featured online store with product catalog, cart, and payment integration.",
-      
+        image:"shopsphere.png",
+        title:"ShopSphere – Full Stack E-Commerce Web Application",
+        description:"MERN stack electronics store with product browsing, secure authentication, and dynamic cart management.",
+         livedemo:"https://shop-sphere-snowy-psi.vercel.app",
+        gitcode:"https://github.com/yashkhollam/shopSphere"
     },
 
    
 
     {
-        image:"https://www.onlineittuts.com/wp-content/uploads/2024/01/eCommerce-website-using-HTML-CSS-and-JavaScript.png",
-        title:"E-commerce Platform",
-        description:"Full-featured online store with product catalog, cart, and payment integration.",
-     
+        image:"wordnest.png",
+        title:"WordNest – Full Stack Blog Platform",
+        description:"A full-stack MERN blog platform where users can create, edit, and manage blog posts through RESTful APIs with a responsive React interface.",
+         livedemo:"https://yashkhollam-word-nest-blog-webapp.vercel.app",
+        gitcode:"https://github.com/yashkhollam/yashkhollam-WordNest-Blog-Webapp"
+    },
+     {
+        image:"/TaskkManagement.png",
+        title:"Task Manager – MERN To-Do Application",
+        description:"A full-stack task management application built with the MERN stack that allows users to create, update, and delete tasks using REST APIs and MongoDB.",
+        livedemo:"https://task-web-black-delta.vercel.app",
+        gitcode:"https://github.com/yashkhollam/Task_Web"
+      
     },
 ]

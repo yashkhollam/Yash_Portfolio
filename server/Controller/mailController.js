@@ -1,33 +1,34 @@
 
-const nodemailer=require('nodemailer')
+const axios=require('axios')
 
 const SendEmail=async(req,res)=>{
 const {name,email,subject,message}=req.body;
+ console.log("req.body",req.body)
 
     try{
-        const transpoter=await nodemailer.createTransport({
-            service:"gmail",
-            auth:{
-                user:process.env.Yashmail,
-                pass:process.env.Apppassword
+       
+        await axios.post("https://api.brevo.com/v3/smtp/email",{
+           sender:{
+            email:process.env.Yashmail,
+            name:"Yash Khollam"
+           },
+           to:[{email:process.env.Yashmail}],
+           subject:subject,
+
+           replyTo:{
+             email:email,
+             name:name
+           },
+           htmlContent:`  
+           <h1>Portfolio Inquery</h1>
+           <P>${message}</p>
+           `
+        },{
+            headers:{
+                "api-key":process.env.BREVO_API_KEY,
+              "Content-Type":"application/json"  
             }
         })
-
-         
-
-        const mailoption={
-            from:email,
-            replyTo:email,
-            to:process.env.Yashmail,
-            subject:`Portfolio Contact from - ${name}`,
-            text:`You have a new contact request from your portfolio: 
-            
-             Name:${name}
-             Email:${email}
-             Message:${message}`,
-        };
-
-        await transpoter.sendMail(mailoption);
 
         res.status(200).json({
             success:true,
